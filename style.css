@@ -1229,3 +1229,14 @@ body {
     color: #52705a;
     font-size: 12px;
 }
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    display: block;
+}
