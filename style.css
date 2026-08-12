@@ -1,3 +1,13 @@
+/* =====================================================
+   SMART CANTEEN - FASTBITE
+   MAIN STYLESHEET
+   ===================================================== */
+
+
+/* =====================================================
+   RESET
+   ===================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,28 +21,32 @@ body {
 }
 
 
-/* ================= NAVBAR ================= */
+/* =====================================================
+   NAVBAR
+   ===================================================== */
 
 .navbar {
     height: 72px;
     padding: 0 7%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     background: white;
     border-bottom: 1px solid #e8ebe6;
 }
 
 .logo {
-    font-size: 21px;
-    font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 8px;
 }
 
-.logo span {
-    font-size: 26px;
+.logo img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    display: block;
 }
 
 .nav-links {
@@ -59,14 +73,18 @@ body {
 }
 
 
-/* ================= HERO ================= */
+/* =====================================================
+   HERO
+   ===================================================== */
 
 .hero {
     min-height: 470px;
     padding: 70px 10%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     background: linear-gradient(
         135deg,
         #f4f9f1,
@@ -104,18 +122,24 @@ body {
 }
 
 
-/* BREAK CARD */
+/* =====================================================
+   BREAK CARD
+   ===================================================== */
 
 .break-card {
     display: flex;
     align-items: center;
     gap: 35px;
+
     margin-top: 25px;
     padding: 18px 22px;
+
     width: fit-content;
+
     background: white;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
 .break-card small {
@@ -136,17 +160,23 @@ body {
 }
 
 
-/* ORDER BUTTON */
+/* =====================================================
+   ORDER BUTTON
+   ===================================================== */
 
 .order-btn {
     margin-top: 25px;
     padding: 14px 25px;
+
     border: none;
     border-radius: 8px;
+
     background: #247c43;
     color: white;
+
     font-size: 15px;
     font-weight: bold;
+
     cursor: pointer;
 }
 
@@ -155,12 +185,16 @@ body {
 }
 
 
-/* HERO IMAGE */
+/* =====================================================
+   HERO IMAGE
+   ===================================================== */
 
 .hero-image {
     width: 330px;
     height: 330px;
+
     position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,11 +203,14 @@ body {
 .food-circle {
     width: 270px;
     height: 270px;
+
     border-radius: 50%;
     background: #e7f1dd;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-size: 120px;
 }
 
@@ -181,24 +218,32 @@ body {
     position: absolute;
     bottom: 20px;
     left: -10px;
+
     background: white;
+
     padding: 14px 20px;
     border-radius: 12px;
+
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .check {
     width: 32px;
     height: 32px;
+
     border-radius: 50%;
+
     background: #dff1e2;
     color: #258047;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-weight: bold;
 }
 
@@ -209,13 +254,17 @@ body {
 }
 
 
-/* ================= QUICK INFO ================= */
+/* =====================================================
+   QUICK INFORMATION
+   ===================================================== */
 
 .quick-info {
     padding: 35px 10%;
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
+
     background: white;
 }
 
@@ -228,11 +277,14 @@ body {
 .info-icon {
     width: 45px;
     height: 45px;
+
     border-radius: 10px;
     background: #edf6ed;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-size: 21px;
 }
 
@@ -247,7 +299,9 @@ body {
 }
 
 
-/* ================= MENU ================= */
+/* =====================================================
+   MENU
+   ===================================================== */
 
 .menu-section {
     padding: 70px 10%;
@@ -257,6 +311,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: end;
+
     margin-bottom: 30px;
 }
 
@@ -279,7 +334,9 @@ body {
 }
 
 
-/* FOOD GRID */
+/* =====================================================
+   FOOD GRID
+   ===================================================== */
 
 .food-grid {
     display: grid;
@@ -287,88 +344,165 @@ body {
     gap: 20px;
 }
 
+
+/* =====================================================
+   FOOD CARD
+   ===================================================== */
+
 .food-card {
-    background: white;
-    border-radius: 14px;
+    background: #ffffff;
+
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: 0.25s;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .food-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.10);
 }
+
+
+/* =====================================================
+   FOOD IMAGE
+   ===================================================== */
 
 .food-image {
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 75px;
+    width: 100%;
+    height: 180px;
+
+    overflow: hidden;
+
+    display: block;
+
+    background: #f3f3f3;
 }
 
-.biryani {
-    background: #fff1d8;
+.food-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.3s ease;
 }
 
-.fried-rice {
-    background: #e9f4df;
+.food-card:hover .food-image img {
+    transform: scale(1.04);
 }
 
-.meals {
-    background: #e9eff7;
-}
 
-.samosa {
-    background: #f9e8d9;
-}
+/* =====================================================
+   FOOD DETAILS
+   ===================================================== */
 
 .food-details {
-    padding: 18px;
+    width: 100%;
+
+    padding: 16px 18px 18px;
+
+    background: #ffffff;
+
+    display: block;
 }
 
+
+/* =====================================================
+   FOOD TITLE
+   ===================================================== */
+
 .food-title {
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     gap: 10px;
 }
 
 .food-title h3 {
-    font-size: 15px;
+    margin: 0;
+
+    color: #172117;
+
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .food-title span {
     color: #238047;
-    font-weight: bold;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    white-space: nowrap;
 }
 
-.food-details p {
+
+/* =====================================================
+   FOOD DESCRIPTION
+   ===================================================== */
+
+.food-details > p {
+    margin: 8px 0 14px;
+
     color: #777;
+
     font-size: 12px;
-    margin: 10px 0 15px;
     line-height: 1.5;
 }
 
+
+/* =====================================================
+   FOOD BOTTOM
+   ===================================================== */
+
 .food-bottom {
+    width: 100%;
+
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .prep-time {
-    font-size: 10px;
     color: #777;
+    font-size: 11px;
 }
+
+
+/* =====================================================
+   ADD BUTTON
+   ===================================================== */
 
 .food-bottom button {
     border: none;
+
     background: #247c43;
     color: white;
-    padding: 8px 13px;
-    border-radius: 6px;
-    cursor: pointer;
+
+    padding: 9px 14px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
     font-weight: bold;
+
+    cursor: pointer;
 }
 
 .food-bottom button:hover {
@@ -376,134 +510,112 @@ body {
 }
 
 
-/* ================= CART ================= */
+/* =====================================================
+   CART
+   ===================================================== */
 
 .cart-popup {
     position: fixed;
+
     bottom: 20px;
     left: 50%;
+
     transform: translateX(-50%);
+
     width: 420px;
+
     padding: 15px 20px;
+
     background: #172117;
     color: white;
+
     border-radius: 12px;
+
     display: none;
+
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    z-index: 1000;
 }
 
 .cart-popup button {
     border: none;
+
     background: #55a96f;
     color: white;
+
     padding: 9px 14px;
+
     border-radius: 6px;
+
     cursor: pointer;
 }
 
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 900px) {
-
-    .hero {
-        padding: 50px 6%;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .hero-image {
-        width: 250px;
-        height: 250px;
-    }
-
-    .food-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .quick-info {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-@media (max-width: 650px) {
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .break-card {
-        margin-left: auto;
-        margin-right: auto;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .food-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .quick-info {
-        grid-template-columns: 1fr;
-    }
-
-    .cart-popup {
-        width: 90%;
-    }
-}
-
-/* ================= ORDER CONFIRMATION ================= */
+/* =====================================================
+   ORDER CONFIRMATION / TRACKING PAGE
+   ===================================================== */
 
 .confirmation-page,
 .tracking-page {
     min-height: 100vh;
+
     background: #f5f8f3;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 30px;
 }
 
 .confirmation-card,
 .tracking-card {
     width: 500px;
+
     background: white;
+
     padding: 40px;
+
     border-radius: 20px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.08);
+
     text-align: center;
 }
 
 .success-icon {
     width: 65px;
     height: 65px;
+
     margin: auto;
+
     border-radius: 50%;
+
     background: #e2f4e5;
     color: #258047;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-size: 30px;
     font-weight: bold;
 }
 
 .success-label {
     color: #258047;
+
     font-size: 11px;
     font-weight: bold;
+
     letter-spacing: 1.5px;
+
     margin-top: 20px;
 }
 
@@ -516,41 +628,58 @@ body {
 .confirmation-text,
 .tracking-subtitle {
     color: #777;
+
     margin-top: 10px;
+
     line-height: 1.6;
 }
 
 
-/* TOKEN */
+/* =====================================================
+   TOKEN
+   ===================================================== */
 
 .token-box {
     margin: 25px 0;
+
     padding: 22px;
+
     background: #f0f7ec;
+
     border: 2px dashed #83ae82;
+
     border-radius: 14px;
 }
 
 .token-box span {
     display: block;
+
     font-size: 11px;
     color: #777;
+
     letter-spacing: 1px;
 }
 
 .token-box strong {
     display: block;
+
     margin-top: 5px;
+
     font-size: 45px;
+
     color: #247c43;
 }
 
 
-/* ORDER SUMMARY */
+/* =====================================================
+   ORDER SUMMARY
+   ===================================================== */
 
 .order-summary {
     text-align: left;
+
     padding: 20px 0;
+
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
 }
@@ -566,26 +695,35 @@ body {
 
 .summary-line {
     margin-top: 15px;
+
     display: flex;
     justify-content: space-between;
 }
 
 
-/* PICKUP INFO */
+/* =====================================================
+   PICKUP INFO
+   ===================================================== */
 
 .pickup-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     gap: 10px;
+
     margin: 20px 0;
 }
 
 .pickup-info > div {
     padding: 15px;
+
     background: #f8f9f7;
+
     border-radius: 10px;
+
     display: flex;
     gap: 10px;
+
     text-align: left;
 }
 
@@ -595,49 +733,71 @@ body {
 
 .pickup-info small {
     display: block;
+
     font-size: 9px;
+
     color: #888;
 }
 
 .pickup-info strong {
     display: block;
+
     font-size: 13px;
+
     margin-top: 5px;
 }
 
 
-/* STATUS */
+/* =====================================================
+   STATUS
+   ===================================================== */
 
 .status {
     padding: 13px;
+
     background: #fff7e5;
+
     border-radius: 8px;
+
     color: #856515;
+
     font-size: 13px;
 }
 
 .status-dot {
     display: inline-block;
+
     width: 8px;
     height: 8px;
+
     background: #e8a91d;
+
     border-radius: 50%;
+
     margin-right: 5px;
 }
 
 
-/* BUTTON */
+/* =====================================================
+   TRACK BUTTON
+   ===================================================== */
 
 .track-btn {
     width: 100%;
+
     margin-top: 20px;
+
     padding: 14px;
+
     border: none;
     border-radius: 8px;
+
     background: #247c43;
     color: white;
+
     font-weight: bold;
     font-size: 14px;
+
     cursor: pointer;
 }
 
@@ -646,7 +806,9 @@ body {
 }
 
 
-/* ================= TRACKING ================= */
+/* =====================================================
+   TRACKING
+   ===================================================== */
 
 .tracking-card {
     text-align: left;
@@ -665,7 +827,9 @@ body {
 }
 
 
-/* TRACKING STEPS */
+/* =====================================================
+   TRACKING STEPS
+   ===================================================== */
 
 .tracking-line {
     margin-top: 35px;
@@ -673,26 +837,36 @@ body {
 
 .tracking-step {
     display: flex;
+
     gap: 15px;
+
     padding-bottom: 28px;
+
     position: relative;
 }
 
 .tracking-step:not(:last-child)::after {
     content: "";
+
     position: absolute;
+
     left: 17px;
     top: 35px;
+
     height: 50px;
     width: 2px;
+
     background: #ddd;
 }
 
 .step-circle {
     min-width: 35px;
     height: 35px;
+
     border-radius: 50%;
+
     background: #eee;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -713,17 +887,24 @@ body {
 
 .tracking-step p {
     color: #777;
+
     font-size: 12px;
+
     margin-top: 5px;
 }
 
 
-/* PICKUP BOX */
+/* =====================================================
+   PICKUP BOX
+   ===================================================== */
 
 .pickup-box {
     margin-top: 5px;
+
     padding: 18px;
+
     background: #eef6ed;
+
     border-radius: 10px;
 }
 
@@ -733,88 +914,129 @@ body {
 
 .pickup-box p {
     color: #666;
+
     font-size: 12px;
+
     margin-top: 7px;
 }
-/* ================= CANTEEN DASHBOARD ================= */
+
+
+/* =====================================================
+   CANTEEN DASHBOARD
+   ===================================================== */
 
 .canteen-title {
     font-size: 15px;
+
     color: #555;
+
     font-weight: 600;
 }
 
 .dashboard {
     padding: 55px 8%;
+
     background: #f5f8f3;
+
     min-height: calc(100vh - 72px);
 }
 
 .dashboard-header {
     display: flex;
+
     justify-content: space-between;
     align-items: end;
+
     margin-bottom: 30px;
 }
 
 .dashboard-header h1 {
     font-size: 34px;
+
     margin-top: 5px;
 }
 
 .dashboard-subtitle {
     color: #777;
+
     margin-top: 8px;
+
     font-size: 14px;
 }
 
 .live-status {
     background: white;
+
     padding: 10px 15px;
+
     border-radius: 20px;
+
     font-size: 12px;
+
     color: #277c45;
+
     font-weight: bold;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.05);
 }
 
 .live-status span {
     display: inline-block;
+
     width: 8px;
     height: 8px;
+
     background: #35a45b;
+
     border-radius: 50%;
+
     margin-right: 6px;
 }
 
 
-/* STATISTICS */
+/* =====================================================
+   STATISTICS
+   ===================================================== */
 
 .stats-grid {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 18px;
+
     margin-bottom: 35px;
 }
 
 .stat-card {
     background: white;
+
     padding: 22px;
+
     border-radius: 14px;
+
     display: flex;
     align-items: center;
+
     gap: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.04);
 }
 
 .stat-icon {
     width: 48px;
     height: 48px;
+
     border-radius: 10px;
+
     background: #eef5e9;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-size: 22px;
 }
 
@@ -832,28 +1054,38 @@ body {
 
 .stat-card p {
     color: #777;
+
     font-size: 12px;
 }
 
 .stat-card h2 {
     margin-top: 5px;
+
     font-size: 25px;
 }
 
 
-/* ORDERS */
+/* =====================================================
+   ORDERS
+   ===================================================== */
 
 .orders-section {
     background: white;
+
     border-radius: 16px;
+
     padding: 25px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.04);
 }
 
 .orders-heading {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     margin-bottom: 25px;
 }
 
@@ -863,15 +1095,21 @@ body {
 
 .orders-heading p {
     color: #777;
+
     font-size: 12px;
+
     margin-top: 5px;
 }
 
 .refresh-btn {
     border: 1px solid #ddd;
+
     background: white;
+
     padding: 9px 15px;
+
     border-radius: 7px;
+
     cursor: pointer;
 }
 
@@ -880,7 +1118,9 @@ body {
 }
 
 
-/* TABLE */
+/* =====================================================
+   ORDER TABLE
+   ===================================================== */
 
 .order-table {
     width: 100%;
@@ -889,6 +1129,7 @@ body {
 .table-header,
 .order-row {
     display: grid;
+
     grid-template-columns:
         0.7fr
         1fr
@@ -898,21 +1139,29 @@ body {
         1.2fr;
 
     align-items: center;
+
     gap: 15px;
 }
 
 .table-header {
     padding: 12px 15px;
+
     background: #f6f8f5;
+
     border-radius: 8px;
+
     color: #777;
+
     font-size: 11px;
+
     font-weight: bold;
 }
 
 .order-row {
     padding: 20px 15px;
+
     border-bottom: 1px solid #eee;
+
     font-size: 13px;
 }
 
@@ -926,52 +1175,71 @@ body {
 
 .token-number {
     font-weight: bold;
+
     color: #247c43;
+
     font-size: 15px;
 }
 
 
-/* STATUS */
+/* =====================================================
+   ORDER STATUS
+   ===================================================== */
 
 .order-status {
     display: inline-block;
+
     padding: 6px 10px;
+
     border-radius: 20px;
+
     font-size: 10px;
+
     font-weight: bold;
 }
 
 .order-status.preparing {
     background: #fff0d1;
+
     color: #936d19;
 }
 
 .order-status.pending {
     background: #eee;
+
     color: #666;
 }
 
 .order-status.ready {
     background: #def2e3;
+
     color: #247c43;
 }
 
 
-/* BUTTONS */
+/* =====================================================
+   ORDER BUTTONS
+   ===================================================== */
 
 .ready-btn,
 .accept-btn,
 .pickup-btn {
     border: none;
+
     padding: 8px 12px;
+
     border-radius: 6px;
+
     cursor: pointer;
+
     font-size: 11px;
+
     font-weight: bold;
 }
 
 .ready-btn {
     background: #247c43;
+
     color: white;
 }
 
@@ -981,25 +1249,35 @@ body {
 
 .accept-btn {
     background: #edf3e9;
+
     color: #247c43;
 }
 
 .pickup-btn {
     background: #e7eff8;
+
     color: #27618f;
 }
 
 
-/* PICKUP COUNTER */
+/* =====================================================
+   PICKUP COUNTER
+   ===================================================== */
 
 .pickup-counter {
     margin-top: 25px;
+
     background: #172117;
+
     color: white;
+
     border-radius: 16px;
+
     padding: 25px 30px;
+
     display: flex;
     align-items: center;
+
     gap: 40px;
 }
 
@@ -1013,37 +1291,229 @@ body {
 
 .current-token {
     margin-left: auto;
+
     text-align: center;
 }
 
 .current-token small {
     display: block;
+
     color: #9ca59c;
+
     font-size: 9px;
 }
 
 .current-token strong {
     display: block;
+
     font-size: 32px;
+
     color: #7dd395;
 }
 
 .next-token {
     padding-left: 25px;
+
     border-left: 1px solid #3b453b;
+
     color: #aaa;
+
     font-size: 12px;
 }
 
 .next-token strong {
     color: white;
+
     font-size: 16px;
 }
 
 
-/* DASHBOARD RESPONSIVE */
+/* =====================================================
+   READY NOTIFICATION
+   ===================================================== */
+
+.ready-notification {
+    margin-top: 20px;
+
+    padding: 18px;
+
+    background: #e4f5e7;
+
+    border: 1px solid #b9dfc0;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: left;
+}
+
+.ready-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #2c914c;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ready-notification strong {
+    color: #20763a;
+
+    font-size: 14px;
+}
+
+.ready-notification p {
+    margin-top: 4px;
+
+    color: #52705a;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   BACK MENU BUTTON
+   ===================================================== */
+
+.back-menu-btn {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+.back-menu-btn:hover {
+    background: #f5f5f5;
+}
+
+
+/* =====================================================
+   CALL TOKEN BUTTON
+   ===================================================== */
+
+.call-token-btn {
+    border: none;
+
+    background: #78c98b;
+
+    color: #172117;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.call-token-btn:hover {
+    background: #91d7a0;
+}
+
+
+/* =====================================================
+   COLLECTED NOTIFICATION
+   ===================================================== */
+
+.collected-notification {
+    margin-top: 20px;
+
+    padding: 18px;
+
+    background: #e4f5e7;
+
+    border: 1px solid #b9dfc0;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: left;
+}
+
+.collected-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #247c43;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.collected-notification strong {
+    color: #20763a;
+
+    font-size: 14px;
+}
+
+.collected-notification p {
+    margin-top: 4px;
+
+    color: #52705a;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLETS
+   ===================================================== */
 
 @media (max-width: 1000px) {
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1062,6 +1532,11 @@ body {
 
 }
 
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+   ===================================================== */
+
 @media (max-width: 700px) {
 
     .dashboard {
@@ -1070,7 +1545,9 @@ body {
 
     .dashboard-header {
         align-items: start;
+
         gap: 20px;
+
         flex-direction: column;
     }
 
@@ -1092,7 +1569,9 @@ body {
 
     .pickup-counter {
         flex-direction: column;
+
         align-items: start;
+
         gap: 15px;
     }
 
@@ -1102,475 +1581,124 @@ body {
 
     .next-token {
         border-left: none;
+
         padding-left: 0;
     }
 
 }
 
-/* ================= READY NOTIFICATION ================= */
 
-.ready-notification {
-    margin-top: 20px;
-    padding: 18px;
-    background: #e4f5e7;
-    border: 1px solid #b9dfc0;
-    border-radius: 12px;
-
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    text-align: left;
-}
-
-.ready-icon {
-    width: 42px;
-    height: 42px;
-
-    border-radius: 50%;
-
-    background: #2c914c;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.ready-notification strong {
-    color: #20763a;
-    font-size: 14px;
-}
-
-.ready-notification p {
-    margin-top: 4px;
-    color: #52705a;
-    font-size: 12px;
-}
-
-
-.back-menu-btn {
-    width: 100%;
-    margin-top: 10px;
-    padding: 12px;
-
-    border: 1px solid #ddd;
-    border-radius: 8px;
-
-    background: white;
-    color: #555;
-
-    cursor: pointer;
-}
-
-.back-menu-btn:hover {
-    background: #f5f5f5;
-}
-
-/* ================= PICKUP BUTTON ================= */
-
-.call-token-btn {
-    border: none;
-    background: #78c98b;
-    color: #172117;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.call-token-btn:hover {
-    background: #91d7a0;
-}
-
-/* ================= COLLECTED NOTIFICATION ================= */
-
-.collected-notification {
-    margin-top: 20px;
-    padding: 18px;
-    background: #e4f5e7;
-    border: 1px solid #b9dfc0;
-    border-radius: 12px;
-
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    text-align: left;
-}
-
-.collected-icon {
-    width: 42px;
-    height: 42px;
-
-    border-radius: 50%;
-
-    background: #247c43;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.collected-notification strong {
-    color: #20763a;
-    font-size: 14px;
-}
-
-.collected-notification p {
-    margin-top: 4px;
-    color: #52705a;
-    font-size: 12px;
-}
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 75px;
-    height: 75px;
-    object-fit: contain;
-    display: block;
-}
 /* =====================================================
-   FOOD CARD IMAGE FIX
+   MOBILE - GENERAL
    ===================================================== */
 
-.food-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    background: white;
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-text {
+        margin: auto;
+    }
+
+    .break-card {
+        margin-left: auto;
+        margin-right: auto;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-info {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-popup {
+        width: 90%;
+    }
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .menu-section {
+        padding: 50px 6%;
+    }
+
+    .food-image {
+        height: 200px;
+    }
+
 }
 
 
-/* Image container */
-
-.food-image {
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-    border-radius: 16px 16px 0 0;
-    position: relative;
-}
-
-
-/* Actual image */
-
-.food-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-
-    display: block;
-
-    transition: transform 0.3s ease;
-}
-
-
-/* Small zoom effect */
-
-.food-card:hover .food-image img {
-    transform: scale(1.04);
-}
-
-
-/* Content below image */
-
-.food-card-content {
-    padding: 18px;
-    background: white;
-}
-
-
-/* Food name */
-
-.food-card h3 {
-    color: #172b4d;
-    font-size: 18px;
-    margin: 0 0 7px 0;
-    font-weight: 700;
-}
-
-
-/* Price */
-
-.food-card .price {
-    color: #16834a;
-    font-size: 17px;
-    font-weight: 700;
-}
-
-
-/* Description */
-
-.food-card p {
-    color: #666;
-    font-size: 13px;
-    line-height: 1.5;
-    margin: 6px 0 12px;
-}
-
-
-/* Preparation time */
-
-.food-card .prep-time {
-    color: #777;
-    font-size: 12px;
-}
-
-
-/* Add button */
-
-.food-card button {
-    background: #24834a;
-    color: white;
-
-    border: none;
-    border-radius: 7px;
-
-    padding: 9px 15px;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    cursor: pointer;
-}
-
-
-.food-card button:hover {
-    background: #1b693b;
-}
-.food-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    background: white;
-}
-
-.food-image {
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-    border-radius: 16px 16px 0 0;
-}
-
-.food-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-.food-info {
-    padding: 16px;
-    background: white;
-}
-
-.food-info h3 {
-    color: #172b4d;
-    font-size: 18px;
-    margin: 0 0 6px;
-}
-
-.food-info p {
-    color: #666;
-    font-size: 13px;
-    line-height: 1.5;
-    margin: 6px 0 12px;
-}
 /* =====================================================
-   FINAL FOOD CARD FIX
+   VERY SMALL MOBILE
    ===================================================== */
 
-.food-card {
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+@media (max-width: 400px) {
 
-    display: flex;
-    flex-direction: column;
-}
+    .hero h1 {
+        font-size: 29px;
+    }
 
+    .hero-image {
+        width: 220px;
+        height: 220px;
+    }
 
-/* FOOD IMAGE */
+    .food-circle {
+        width: 200px;
+        height: 200px;
 
-.food-image {
-    width: 100%;
-    height: 180px;
+        font-size: 90px;
+    }
 
-    overflow: hidden;
+    .confirmation-card,
+    .tracking-card {
+        width: 100%;
 
-    display: block;
+        padding: 25px;
+    }
 
-    border-radius: 16px 16px 0 0;
+    .pickup-info {
+        grid-template-columns: 1fr;
+    }
 
-    position: relative;
-}
-
-
-.food-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center;
-}
-
-
-/* FOOD DETAILS */
-
-.food-details {
-    padding: 16px 18px 18px;
-
-    background: #ffffff;
-
-    position: relative;
-
-    z-index: 2;
-}
-
-
-/* FOOD TITLE */
-
-.food-title {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 10px;
-}
-
-
-.food-title h3 {
-    margin: 0;
-
-    color: #172117;
-
-    font-size: 16px;
-
-    font-weight: 700;
-}
-
-
-.food-title span {
-    color: #238047;
-
-    font-size: 16px;
-
-    font-weight: 700;
-
-    white-space: nowrap;
-}
-
-
-/* DESCRIPTION */
-
-.food-details > p {
-    margin: 8px 0 14px;
-
-    color: #777;
-
-    font-size: 12px;
-
-    line-height: 1.5;
-}
-
-
-/* BOTTOM ROW */
-
-.food-bottom {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-}
-
-
-.prep-time {
-    color: #777;
-
-    font-size: 11px;
-}
-
-
-/* ADD BUTTON */
-
-.food-bottom button {
-    border: none;
-
-    background: #247c43;
-
-    color: white;
-
-    padding: 9px 14px;
-
-    border-radius: 7px;
-
-    font-size: 12px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-}
-
-
-.food-bottom button:hover {
-    background: #1b6335;
-}
-
-
-/* IMAGE HOVER */
-
-.food-image img {
-    transition: transform 0.3s ease;
-}
-
-
-.food-card:hover .food-image img {
-    transform: scale(1.04);
-}
-/* FINAL FOOD CARD FIX */
-
-.food-card {
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.food-image {
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-    display: block;
-}
-
-.food-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.food-details {
-    padding: 16px 18px 18px;
-    background: #ffffff;
 }
