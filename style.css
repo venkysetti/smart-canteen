@@ -1240,3 +1240,113 @@ body {
     object-fit: contain;
     display: block;
 }
+/* =====================================================
+   FOOD CARD IMAGE FIX
+   ===================================================== */
+
+.food-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: white;
+}
+
+
+/* Image container */
+
+.food-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+    position: relative;
+}
+
+
+/* Actual image */
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Small zoom effect */
+
+.food-card:hover .food-image img {
+    transform: scale(1.04);
+}
+
+
+/* Content below image */
+
+.food-card-content {
+    padding: 18px;
+    background: white;
+}
+
+
+/* Food name */
+
+.food-card h3 {
+    color: #172b4d;
+    font-size: 18px;
+    margin: 0 0 7px 0;
+    font-weight: 700;
+}
+
+
+/* Price */
+
+.food-card .price {
+    color: #16834a;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+/* Description */
+
+.food-card p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 6px 0 12px;
+}
+
+
+/* Preparation time */
+
+.food-card .prep-time {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* Add button */
+
+.food-card button {
+    background: #24834a;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    padding: 9px 15px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.food-card button:hover {
+    background: #1b693b;
+}
