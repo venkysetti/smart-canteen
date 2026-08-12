@@ -1350,3 +1350,42 @@ body {
 .food-card button:hover {
     background: #1b693b;
 }
+.food-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: white;
+}
+
+.food-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.food-info {
+    padding: 16px;
+    background: white;
+}
+
+.food-info h3 {
+    color: #172b4d;
+    font-size: 18px;
+    margin: 0 0 6px;
+}
+
+.food-info p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 6px 0 12px;
+}
