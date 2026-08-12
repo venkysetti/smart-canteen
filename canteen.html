@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Canteen Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>🍽️</span>
+            Smart Canteen
+        </div>
+
+        <div class="canteen-title">
+            Canteen Staff Dashboard
+        </div>
+
+        <button
+            class="profile-btn"
+            onclick="location.href='index.html'">
+
+            ← Student View
+
+        </button>
+
+    </nav>
+
+
+    <!-- Dashboard -->
+
+    <main class="dashboard">
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <p class="section-label">
+                    CANTEEN MANAGEMENT
+                </p>
+
+                <h1>
+                    Today's Orders
+                </h1>
+
+                <p class="dashboard-subtitle">
+                    Manage student pre-orders and pickup status.
+                </p>
+
+            </div>
+
+            <div class="live-status">
+
+                <span></span>
+
+                Canteen Live
+
+            </div>
+
+        </div>
+
+
+        <!-- Statistics -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📋
+                </div>
+
+                <div>
+
+                    <p>Total Orders</p>
+
+                    <h2 id="totalOrders">
+                        42
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon yellow">
+                    🍳
+                </div>
+
+                <div>
+
+                    <p>Preparing</p>
+
+                    <h2 id="preparingOrders">
+                        8
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    ✓
+                </div>
+
+                <div>
+
+                    <p>Ready</p>
+
+                    <h2 id="readyOrders">
+                        5
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    🎫
+                </div>
+
+                <div>
+
+                    <p>Pickup Pending</p>
+
+                    <h2 id="pickupOrders">
+                        3
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Orders -->
+
+        <section class="orders-section">
+
+            <div class="orders-heading">
+
+                <div>
+
+                    <h2>
+                        Incoming Orders
+                    </h2>
+
+                    <p>
+                        Process student pre-orders before the break.
+                    </p>
+
+                </div>
+
+                <button
+                    class="refresh-btn"
+                    onclick="loadCanteenOrder()">
+
+                    ↻ Refresh
+
+                </button>
+
+            </div>
+
+
+            <!-- Demo Order -->
+
+            <div class="order-table">
+
+                <div class="table-header">
+
+                    <span>Token</span>
+
+                    <span>Student</span>
+
+                    <span>Order</span>
+
+                    <span>Time</span>
+
+                    <span>Status</span>
+
+                    <span>Action</span>
+
+                </div>
+
+
+                <div class="order-row">
+
+                    <span class="token-number">
+                        #027
+                    </span>
+
+                    <span>
+                        Rahul
+                    </span>
+
+                    <span>
+
+                        <strong>
+                            Chicken Biryani
+                        </strong>
+
+                        <small>
+                            × 1
+                        </small>
+
+                    </span>
+
+                    <span>
+                        11:35 AM
+                    </span>
+
+                    <span>
+
+                        <span
+                            id="orderStatus"
+                            class="order-status preparing">
+
+                            Preparing
+
+                        </span>
+
+                    </span>
+
+                    <span>
+
+                        <button
+                            id="readyButton"
+                            class="ready-btn"
+                            onclick="markOrderReady()">
+
+                            Mark as Ready
+
+                        </button>
+
+                    </span>
+
+                </div>
+
+
+                <!-- Other Demo Orders -->
+
+                <div class="order-row">
+
+                    <span class="token-number">
+                        #028
+                    </span>
+
+                    <span>
+                        Priya
+                    </span>
+
+                    <span>
+
+                        <strong>
+                            Fried Rice
+                        </strong>
+
+                        <small>
+                            × 1
+                        </small>
+
+                    </span>
+
+                    <span>
+                        11:37 AM
+                    </span>
+
+                    <span>
+
+                        <span class="order-status pending">
+                            Pending
+                        </span>
+
+                    </span>
+
+                    <span>
+
+                        <button class="accept-btn">
+                            Accept
+                        </button>
+
+                    </span>
+
+                </div>
+
+
+                <div class="order-row">
+
+                    <span class="token-number">
+                        #029
+                    </span>
+
+                    <span>
+                        Arjun
+                    </span>
+
+                    <span>
+
+                        <strong>
+                            South Indian Meals
+                        </strong>
+
+                        <small>
+                            × 1
+                        </small>
+
+                    </span>
+
+                    <span>
+                        11:40 AM
+                    </span>
+
+                    <span>
+
+                        <span class="order-status ready">
+                            Ready
+                        </span>
+
+                    </span>
+
+                    <span>
+
+                        <button class="pickup-btn">
+                            Pickup
+                        </button>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Pickup Counter -->
+
+        <div class="pickup-counter">
+
+    <div>
+
+        <p class="section-label">
+            PICKUP COUNTER
+        </p>
+
+        <h2>
+            Current Pickup
+        </h2>
+
+    </div>
+
+    <div class="current-token">
+
+        <small>
+            NOW SERVING
+        </small>
+
+        <strong id="currentPickupToken">
+            #026
+        </strong>
+
+    </div>
+
+    <div class="next-token">
+
+        Next:
+        <strong id="nextToken">
+            #027
+        </strong>
+
+    </div>
+
+    <button
+        class="call-token-btn"
+        onclick="callNextToken()">
+
+        📢 Call Next Token
+
+    </button>
+
+</div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+    <script>
+        loadCanteenOrder();
+    </script>
+
+</body>
+
+</html>

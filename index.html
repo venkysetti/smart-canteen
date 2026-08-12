@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Canteen</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>🍽️</span>
+            Smart Canteen
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#orders">My Orders</a>
+        </div>
+
+        <button class="profile-btn">
+            👤 Student
+        </button>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="welcome">WELCOME BACK 👋</p>
+
+            <h1>
+                Order Before the Break.<br>
+                <span>Skip the Queue.</span>
+            </h1>
+
+            <p class="hero-text">
+                Pre-order your food and collect it during your break
+                without waiting in the canteen queue.
+            </p>
+
+            <div class="break-card">
+
+                <div>
+                    <small>YOUR NEXT BREAK</small>
+                    <h3>12:00 PM – 1:00 PM</h3>
+                </div>
+
+                <div class="break-status">
+                    🟢 Open for Pre-Orders
+                </div>
+
+            </div>
+
+            <button class="order-btn" onclick="scrollToMenu()">
+                Order Food →
+            </button>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div class="food-circle">
+                🍛
+            </div>
+
+            <div class="floating-card">
+
+                <span class="check">✓</span>
+
+                <div>
+                    <strong>Order #027</strong>
+                    <p>Ready for Pickup</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Quick Information -->
+    <section class="quick-info">
+
+        <div class="info-card">
+            <div class="info-icon">📱</div>
+
+            <div>
+                <h3>Pre-Order</h3>
+                <p>Order your food before the break.</p>
+            </div>
+        </div>
+
+
+        <div class="info-card">
+            <div class="info-icon">⏱️</div>
+
+            <div>
+                <h3>Save Time</h3>
+                <p>No need to stand in long queues.</p>
+            </div>
+        </div>
+
+
+        <div class="info-card">
+            <div class="info-icon">🎫</div>
+
+            <div>
+                <h3>Digital Token</h3>
+                <p>Get your pickup token instantly.</p>
+            </div>
+        </div>
+
+
+        <div class="info-card">
+            <div class="info-icon">🔔</div>
+
+            <div>
+                <h3>Ready Alert</h3>
+                <p>Know when your food is ready.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Menu -->
+    <section class="menu-section" id="menu">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-label">TODAY'S MENU</p>
+                <h2>What would you like to eat?</h2>
+            </div>
+
+            <span class="availability">
+                🟢 Available Now
+            </span>
+
+        </div>
+
+
+        <div class="food-grid">
+
+            <!-- Food 1 -->
+            <div class="food-card">
+
+                <div class="food-image biryani">
+                    🍛
+                </div>
+
+                <div class="food-details">
+
+                    <div class="food-title">
+                        <h3>Chicken Biryani</h3>
+                        <span>₹120</span>
+                    </div>
+
+                    <p>
+                        Delicious chicken biryani with raita.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="prep-time">
+                            ⏱️ 20–25 min
+                        </span>
+
+                        <button onclick="addToCart('Chicken Biryani', 120, 25)">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Food 2 -->
+            <div class="food-card">
+
+                <div class="food-image fried-rice">
+                    🍚
+                </div>
+
+                <div class="food-details">
+
+                    <div class="food-title">
+                        <h3>Fried Rice</h3>
+                        <span>₹80</span>
+                    </div>
+
+                    <p>
+                        Fresh vegetable fried rice.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="prep-time">
+                            ⏱️ 10–15 min
+                        </span>
+
+                        <button onclick="addToCart('Fried Rice', 80, 15)">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Food 3 -->
+            <div class="food-card">
+
+                <div class="food-image meals">
+                    🍱
+                </div>
+
+                <div class="food-details">
+
+                    <div class="food-title">
+                        <h3>South Indian Meals</h3>
+                        <span>₹90</span>
+                    </div>
+
+                    <p>
+                        Complete traditional lunch meal.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="prep-time">
+                            ⏱️ 15–20 min
+                        </span>
+
+                        <button onclick="addToCart('South Indian Meals', 90, 20)">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Food 4 -->
+            <div class="food-card">
+
+                <div class="food-image samosa">
+                    🥟
+                </div>
+
+                <div class="food-details">
+
+                    <div class="food-title">
+                        <h3>Samosa</h3>
+                        <span>₹20</span>
+                    </div>
+
+                    <p>
+                        Crispy potato samosa.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="prep-time">
+                            ⚡ 5–10 min
+                        </span>
+
+                        <button onclick="addToCart('Samosa', 20, 10)">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Cart -->
+    <div class="cart-popup" id="cartPopup">
+
+        <div>
+            🛒
+            <span id="cartCount">0</span> items
+        </div>
+
+        <strong id="cartTotal">₹0</strong>
+
+        <button onclick="viewCart()">
+            View Cart →
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
