@@ -1546,3 +1546,31 @@ body {
 .food-card:hover .food-image img {
     transform: scale(1.04);
 }
+/* FINAL FOOD CARD FIX */
+
+.food-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    display: block;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.food-details {
+    padding: 16px 18px 18px;
+    background: #ffffff;
+}
